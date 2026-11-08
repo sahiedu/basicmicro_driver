@@ -34,6 +34,10 @@ Safety behaviour:
 ## Installation
 
 ```bash
+# Install pip
+sudo apt update
+sudo apt install python3-pip
+
 # Basicmicro library
 sudo apt install python3-serial
 pip install --user --break-system-packages basicmicro==2.0.10

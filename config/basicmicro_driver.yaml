@@ -1,0 +1,23 @@
+# basicmicro_driver parameters
+#
+# Used by basicmicro_simple.launch.py for both the driver node and the robot
+# model (wheel_radius and wheel_separation), so they always match.
+# Write decimals as decimals (0.1, 1.0) and whole numbers as integers.
+
+/**:
+  ros__parameters:
+    # Serial connection
+    port: /dev/ttyACM0            # tip: a /dev/serial/by-id/... path survives replugging
+    baud: 38400
+    address: 128                  # 0x80
+
+    # Robot geometry
+    wheel_radius: 0.04            # m, (radius=4 cm, diameter=8cm)
+    wheel_separation: 0.24        # m, between wheel centers (24 cm) 
+    encoder_counts_per_rev: 64    # counts per motor turn
+    gear_ratio: 131.25            # motor turns per wheel turn
+
+    # Safety
+    max_speed: 9000               # counts/s per wheel; both wheels scale together
+    cmd_vel_timeout: 2.0          # s without cmd_vel before stopping (0.0 = off)
+    read_timeout: 0.05            # s to wait for a controller reply

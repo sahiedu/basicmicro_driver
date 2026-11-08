@@ -52,6 +52,14 @@ source install/setup.bash
 
 ## Usage
 
+### Identify the serial port
+
+```bash
+ls /dev/ttyACM* /dev/ttyUSB* /dev/ttyAMA* 2>/dev/null
+```
+- `/dev/ttyACM0`: USB connection
+- `/dev/ttyAMA0`: GPIO serial (UART) connection
+
 ### Running the node (first test)
 
 ```bash
